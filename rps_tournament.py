@@ -1,8 +1,8 @@
-def solve(n, p, i, o, formations):
-  """Return minimum formation changes for POI (1-indexed p) to win."""
+def solve(n, poi, formations):
+  """Return minimum formation changes for POI (1-indexed) to win."""
   beats = {('P', 'R'), ('S', 'P'), ('R', 'S')}
   counter = {'R': 'P', 'P': 'S', 'S': 'R'}
-  poi = p - 1
+  poi = poi - 1
   formations = formations.upper()
 
   fixed = [''] * n
@@ -56,5 +56,5 @@ def solve(n, p, i, o, formations):
 
 
 if __name__ == '__main__':
-  print(solve(3, 2, 0, 0, 'PSP'))  # example 1 -> 0
-  print(solve(4, 2, 0, 0, 'PRS'))  # example 2 -> 1
+  print(solve(3, 2, 'PSP'))  # 0
+  print(solve(4, 2, 'PRS'))  # 1
