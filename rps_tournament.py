@@ -1,60 +1,44 @@
 def solve(n, poi, formations):
-  """Return minimum formation changes for POI (1-indexed) to win."""
-  beats = {('P', 'R'), ('S', 'P'), ('R', 'S')}
-  counter = {'R': 'P', 'P': 'S', 'S': 'R'}
-  poi = poi - 1
-  formations = formations.upper()
+  win = {'R': 'P', 'P': 'S', 'S': 'R'}
+  beat = {('P', 'R'), ('S', 'P'), ('R', 'S')}
+  poi -= 1
+  f = formations.upper()
 
-  fixed = [''] * n
-  if len(formations) == n:
-    fixed = list(formations)
-  else:
+  fixed = list(f) if len(f) == n else [''] * n
+  if len(f) != n:
     k = 0
-    for j in range(n):
-      if j != poi:
-        fixed[j] = formations[k]
+    for i in range(n):
+      if i != poi:
+        fixed[i] = f[k]
         k += 1
 
-  def run(start):
-    moves = []
-    survivors = list(range(n))
-    while len(survivors) > 1:
-      nxt = []
-      j = 0
-      while j < len(survivors):
-        if j == len(survivors) - 1:
-          nxt.append(survivors[j])
+  def count(start):
+    need, alive = [], list(range(n))
+    while len(alive) > 1:
+      nxt, i = [], 0
+      while i < len(alive):
+        if i == len(alive) - 1:
+          nxt.append(alive[i])
           break
-        a, b = survivors[j], survivors[j + 1]
-        fa, fb = fixed[a], fixed[b]
+        a, b = alive[i], alive[i + 1]
         if a == poi or b == poi:
-          opp = b if a == poi else a
-          moves.append(counter[fixed[opp]])
+          need.append(win[fixed[b if a == poi else a]])
           nxt.append(poi)
-        elif fa == fb:
+        elif fixed[a] == fixed[b]:
           pass
-        elif (fa, fb) in beats:
+        elif (fixed[a], fixed[b]) in beat:
           nxt.append(a)
         else:
           nxt.append(b)
-        j += 2
-      survivors = nxt
-      if not survivors:
-        return float('inf')
-    if survivors != [poi]:
-      return float('inf')
-    cur, ch = start, 0
-    for m in moves:
+        i += 2
+      alive = nxt
+    if alive != [poi]:
+      return 10**9
+    ans, cur = 0, start
+    for m in need:
       if m != cur:
-        ch += 1
+        ans += 1
         cur = m
-    return ch
+    return ans
 
-  if len(formations) == n:
-    return run(fixed[poi])
-  return min(run(s) for s in 'RPS')
-
-
-if __name__ == '__main__':
-  print(solve(3, 2, 'PSP'))  # 0
-  print(solve(4, 2, 'PRS'))  # 1
+  return count(fixed[poi]) if len(f) == n else min(count(s) for s in 'RPS')
