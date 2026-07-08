@@ -1,84 +1,60 @@
-#!/usr/bin/env python3
-"""Minimum formation changes for POI to win a line-based RPS tournament."""
+def solve(n, p, i, o, formations):
+  """Return minimum formation changes for POI (1-indexed p) to win."""
+  beats = {('P', 'R'), ('S', 'P'), ('R', 'S')}
+  counter = {'R': 'P', 'P': 'S', 'S': 'R'}
+  poi = p - 1
+  formations = formations.upper()
 
-from __future__ import annotations
+  fixed = [''] * n
+  if len(formations) == n:
+    fixed = list(formations)
+  else:
+    k = 0
+    for j in range(n):
+      if j != poi:
+        fixed[j] = formations[k]
+        k += 1
 
-import sys
-
-
-def beats(a: str, b: str) -> bool:
-    return (a, b) in (("P", "R"), ("S", "P"), ("R", "S"))
-
-
-def counter(formation: str) -> str:
-    return {"R": "P", "P": "S", "S": "R"}[formation]
-
-
-def min_changes(initial: str, required: list[str]) -> int:
-    changes = 0
-    current = initial
-    for move in required:
-        if move != current:
-            changes += 1
-            current = move
-    return changes
-
-
-def solve(n: int, poi: int, formations: str) -> int:
-    if len(formations) != n:
-        raise ValueError(f"expected {n} formations, got {len(formations)}")
-
-    poi_idx = poi - 1
-    if not 0 <= poi_idx < n:
-        raise ValueError(f"POI index {poi} is out of range for {n} players")
-
-    initial = formations[poi_idx]
+  def run(start):
+    moves = []
     survivors = list(range(n))
-    required_moves: list[str] = []
-
     while len(survivors) > 1:
-        next_round: list[int] = []
-        i = 0
-        while i < len(survivors):
-            if i == len(survivors) - 1:
-                next_round.append(survivors[i])
-                break
+      nxt = []
+      j = 0
+      while j < len(survivors):
+        if j == len(survivors) - 1:
+          nxt.append(survivors[j])
+          break
+        a, b = survivors[j], survivors[j + 1]
+        fa, fb = fixed[a], fixed[b]
+        if a == poi or b == poi:
+          opp = b if a == poi else a
+          moves.append(counter[fixed[opp]])
+          nxt.append(poi)
+        elif fa == fb:
+          pass
+        elif (fa, fb) in beats:
+          nxt.append(a)
+        else:
+          nxt.append(b)
+        j += 2
+      survivors = nxt
+      if not survivors:
+        return float('inf')
+    if survivors != [poi]:
+      return float('inf')
+    cur, ch = start, 0
+    for m in moves:
+      if m != cur:
+        ch += 1
+        cur = m
+    return ch
 
-            p1, p2 = survivors[i], survivors[i + 1]
-            f1, f2 = formations[p1], formations[p2]
-
-            if p1 == poi_idx or p2 == poi_idx:
-                opponent = p2 if p1 == poi_idx else p1
-                required_moves.append(counter(formations[opponent]))
-                next_round.append(poi_idx)
-            elif f1 == f2:
-                pass
-            elif beats(f1, f2):
-                next_round.append(p1)
-            else:
-                next_round.append(p2)
-
-            i += 2
-
-        survivors = next_round
-        if not survivors:
-            return -1
-
-    if len(survivors) == 1 and survivors[0] == poi_idx:
-        return min_changes(initial, required_moves)
-    return -1
-
-
-def main() -> None:
-    data = sys.stdin.read().split()
-    if not data:
-        return
-
-    n = int(data[0])
-    poi = int(data[1])
-    formations = data[2].upper()
-    print(solve(n, poi, formations))
+  if len(formations) == n:
+    return run(fixed[poi])
+  return min(run(s) for s in 'RPS')
 
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+  print(solve(3, 2, 0, 0, 'PSP'))  # example 1 -> 0
+  print(solve(4, 2, 0, 0, 'PRS'))  # example 2 -> 1
