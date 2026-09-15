@@ -1,0 +1,36 @@
+[project]
+name = "nutritrack"
+version = "0.1.0"
+description = "Track per-meal and daily calories and nutrition from gram weights"
+requires-python = ">=3.10"
+# Deliberately dependency-free: the standard library covers everything here.
+dependencies = []
+
+[project.scripts]
+nutritrack = "nutritrack.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["nutritrack"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "C4", "UP", "RUF", "PIE", "TRY"]
+ignore = [
+  # Dates and times are deliberately local: a food diary is kept in the eater's
+  # own timezone, not UTC.
+  "DTZ005",
+  "DTZ011",
+  # Long error messages read better inline than hoisted into variables.
+  "TRY003",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Test helpers build keyword dicts and intentionally ignore some tuple members.
+"tests/*" = ["C408", "RUF059"]
