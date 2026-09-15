@@ -153,6 +153,8 @@ class MealLog:
             key=lambda item: (
                 item.date,
                 meal_sort_key(item.meal),
+                # Items without a clock time sort after the timed ones.
+                not item.time,
                 item.time or "",
                 item.id,
             ),

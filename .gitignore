@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Generated dashboards; regenerate with `nutritrack dashboard <date>`.
+reports/
+
+# Meal photos are personal; keep the folder, not its contents.
+photos/*
+!photos/README.md

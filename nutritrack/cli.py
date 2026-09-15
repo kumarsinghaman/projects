@@ -225,7 +225,8 @@ def cmd_entries(args: argparse.Namespace, workspace: Workspace) -> int:
     for item in items:
         values = item.nutrients(workspace.db)
         print(
-            f"  {item.id:<14}{item.meal:<16}{item.food_name:<30}"
+            f"  {item.id:<14}{report.clip(item.meal, 14):<16}"
+            f"{report.clip(item.food_name, 34):<36}"
             f"{item.grams:>6.0f}g{values['kcal']:>8.0f} kcal"
         )
     return EXIT_OK
