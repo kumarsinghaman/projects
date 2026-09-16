@@ -1,4 +1,15 @@
 {
   "version": 1,
-  "items": []
+  "items": [
+    {
+      "id": "20260916-001",
+      "date": "2026-09-16",
+      "meal": "breakfast",
+      "food_name": "Upma (semolina, cooked)",
+      "grams": 250.0,
+      "food_id": "upma",
+      "photo": "photos/2026-09-16-breakfast-upma.jpg",
+      "note": "rava upma with carrot, corn, beans, onion"
+    }
+  ]
 }
