@@ -1,20 +1,75 @@
 # projects
 
+This repository holds `nutritrack`, a gram-based food diary. See `README.md` for
+the full command reference.
+
+## Setup, lint, test
+
+No dependencies to install; `nutritrack` is standard library only.
+
+```bash
+python3 -m unittest discover -s tests -t .   # test suite
+ruff check nutritrack tests                  # lint (config in pyproject.toml)
+```
+
+`ruff` is not part of the runtime and may need `pip install ruff` on a fresh VM.
+
+## Logging a meal from a photo
+
+This is the main workflow the repository exists for. When the user sends a photo
+of a meal:
+
+1. Identify each component in the picture. Ask for gram weights when they are
+   not given; do not invent them. If the user gives a household measure ("2
+   rotis", "1 bowl of dal"), convert it using the `typical_grams` value on the
+   matching food in `data/foods.json` and say which weight was assumed.
+2. Look up the names first so the command cannot fail halfway:
+   `python3 -m nutritrack foods <query>`.
+3. Log the whole meal in one call, attaching the photo:
+
+   ```bash
+   python3 -m nutritrack log -m lunch -d today \
+       --photo photos/2026-09-15-lunch.jpg \
+       "chicken biryani:320" curd:100 "green salad:80"
+   ```
+
+4. Report the numbers the command prints: per item, the meal total, and the day
+   so far against the calorie goal.
+5. If a component is not in the database, add it once with `nutritrack food add`
+   using values per 100 g from the packet or a comparable recipe, then log it.
+   Say where the values came from.
+6. Commit the updated `data/log.json` (and `data/foods.custom.json` if it
+   changed) so the diary is preserved.
+
+Exit codes matter when scripting: `2` means the food name matched several
+entries and the exact id is needed, `1` means any other failure.
+
+## Conventions
+
+- `data/foods.json` is data, not code. `tests/test_foods.py` enforces its
+  invariants: macros must roughly reconcile with the stated calories, sugar
+  cannot exceed carbs, saturated fat cannot exceed fat, and no two foods may
+  claim the same name or alias. Run the tests after editing it.
+- Nutrition facts are always stored per 100 g and scaled at read time. Never
+  write pre-scaled numbers into `data/log.json`.
+- Adding a nutrient means adding it to `nutritrack/nutrients.py` and to every
+  food in `data/foods.json`; `Food.from_dict` rejects incomplete records.
+- Tests must never touch the real diary. Pass `--data-dir` to a temporary
+  directory, as `tests/test_cli.py` does.
+
 ## Cursor Cloud specific instructions
 
-This repository is currently an empty starter: the only tracked file on `main` is
-`README.md` (contents: `# projects`). There is no application code, dependency
-manifest (e.g. `package.json`, `requirements.txt`, `pyproject.toml`), test suite,
-or build system yet.
+- Python 3.12 and Node.js 22 are available; nothing else is needed to run or
+  test this project.
+- `google-chrome` is installed and can screenshot a generated dashboard:
 
-Practical implications for future agents:
+  ```bash
+  python3 -m nutritrack dashboard 2026-09-15 --out /tmp/day.html
+  timeout 30 google-chrome --headless=new --disable-gpu --no-sandbox \
+      --hide-scrollbars --force-device-scale-factor=2 --window-size=1200,2160 \
+      --screenshot=/tmp/day.png file:///tmp/day.html
+  ```
 
-- There is nothing to install, lint, test, build, or run until source code and a
-  dependency manifest are added. Do not fabricate a build/run flow that does not
-  exist.
-- The VM already provides common language runtimes (verified: Python 3.12,
-  Node.js 22). Use them directly for quick scripts.
-- When code is added, put its real setup/lint/test/build/run commands here and
-  wire dependency installation into the startup update script. The current update
-  script is intentionally a guarded no-op that installs from a manifest only if
-  one is present, so it stays safe while the repo is empty.
+  Chrome writes the PNG and then hangs instead of exiting, so always wrap it in
+  `timeout` and check for the file rather than trusting the exit code.
+- `ffmpeg` is available for resizing or converting those screenshots.

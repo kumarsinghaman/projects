@@ -1,0 +1,889 @@
+{
+  "version": 1,
+  "basis_grams": 100,
+  "note": "Nutrient values are per 100 g edible portion. Cooked values are used where the food is normally eaten cooked. Sources: USDA FoodData Central and IFCT (Indian Food Composition Tables); mixed dishes are typical home-style recipes and are approximations.",
+  "foods": [
+    {
+      "id": "roti",
+      "name": "Roti / chapati (whole wheat, no ghee)",
+      "category": "grains",
+      "aliases": ["chapati", "phulka", "wheat roti", "rotis"],
+      "typical_grams": 40,
+      "typical_label": "1 medium roti",
+      "per_100g": {"kcal": 285, "protein_g": 9.6, "carb_g": 54.0, "fiber_g": 6.4, "sugar_g": 1.4, "fat_g": 2.7, "sat_fat_g": 0.5, "sodium_mg": 210, "potassium_mg": 180}
+    },
+    {
+      "id": "paratha_plain",
+      "name": "Paratha, plain (shallow fried)",
+      "category": "grains",
+      "aliases": ["paratha", "parantha"],
+      "typical_grams": 60,
+      "typical_label": "1 paratha",
+      "per_100g": {"kcal": 330, "protein_g": 7.5, "carb_g": 45.0, "fiber_g": 4.2, "sugar_g": 1.5, "fat_g": 13.0, "sat_fat_g": 4.0, "sodium_mg": 350, "potassium_mg": 150}
+    },
+    {
+      "id": "aloo_paratha",
+      "name": "Aloo paratha",
+      "category": "grains",
+      "aliases": ["potato paratha"],
+      "typical_grams": 110,
+      "typical_label": "1 stuffed paratha",
+      "per_100g": {"kcal": 265, "protein_g": 6.0, "carb_g": 38.0, "fiber_g": 3.6, "sugar_g": 1.6, "fat_g": 10.0, "sat_fat_g": 3.2, "sodium_mg": 400, "potassium_mg": 260}
+    },
+    {
+      "id": "naan",
+      "name": "Naan (tandoori, plain)",
+      "category": "grains",
+      "aliases": ["butter naan", "tandoori naan"],
+      "typical_grams": 90,
+      "typical_label": "1 naan",
+      "per_100g": {"kcal": 310, "protein_g": 8.7, "carb_g": 50.0, "fiber_g": 2.2, "sugar_g": 3.6, "fat_g": 7.5, "sat_fat_g": 1.8, "sodium_mg": 480, "potassium_mg": 120}
+    },
+    {
+      "id": "rice_white_cooked",
+      "name": "Rice, white, cooked",
+      "category": "grains",
+      "aliases": ["rice", "steamed rice", "chawal", "basmati rice"],
+      "typical_grams": 150,
+      "typical_label": "1 cup cooked",
+      "per_100g": {"kcal": 130, "protein_g": 2.7, "carb_g": 28.2, "fiber_g": 0.4, "sugar_g": 0.1, "fat_g": 0.3, "sat_fat_g": 0.1, "sodium_mg": 1, "potassium_mg": 35}
+    },
+    {
+      "id": "rice_brown_cooked",
+      "name": "Rice, brown, cooked",
+      "category": "grains",
+      "aliases": ["brown rice"],
+      "typical_grams": 150,
+      "typical_label": "1 cup cooked",
+      "per_100g": {"kcal": 123, "protein_g": 2.7, "carb_g": 25.6, "fiber_g": 1.6, "sugar_g": 0.4, "fat_g": 1.0, "sat_fat_g": 0.2, "sodium_mg": 4, "potassium_mg": 86}
+    },
+    {
+      "id": "jeera_rice",
+      "name": "Jeera rice (cumin rice with ghee)",
+      "category": "grains",
+      "aliases": ["cumin rice"],
+      "typical_grams": 180,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 175, "protein_g": 3.0, "carb_g": 28.0, "fiber_g": 0.6, "sugar_g": 0.3, "fat_g": 5.6, "sat_fat_g": 2.8, "sodium_mg": 230, "potassium_mg": 50}
+    },
+    {
+      "id": "biryani_chicken",
+      "name": "Chicken biryani",
+      "category": "mixed",
+      "aliases": ["biryani", "chicken biriyani"],
+      "typical_grams": 300,
+      "typical_label": "1 plate",
+      "per_100g": {"kcal": 190, "protein_g": 9.0, "carb_g": 22.0, "fiber_g": 1.2, "sugar_g": 1.5, "fat_g": 7.5, "sat_fat_g": 2.5, "sodium_mg": 420, "potassium_mg": 180}
+    },
+    {
+      "id": "idli",
+      "name": "Idli, steamed",
+      "category": "grains",
+      "aliases": ["idly", "idlis"],
+      "typical_grams": 50,
+      "typical_label": "1 idli",
+      "per_100g": {"kcal": 105, "protein_g": 3.4, "carb_g": 20.0, "fiber_g": 1.0, "sugar_g": 0.4, "fat_g": 0.4, "sat_fat_g": 0.1, "sodium_mg": 220, "potassium_mg": 60}
+    },
+    {
+      "id": "dosa_plain",
+      "name": "Dosa, plain",
+      "category": "grains",
+      "aliases": ["dosa", "sada dosa"],
+      "typical_grams": 100,
+      "typical_label": "1 dosa",
+      "per_100g": {"kcal": 168, "protein_g": 4.0, "carb_g": 25.0, "fiber_g": 1.2, "sugar_g": 0.5, "fat_g": 5.5, "sat_fat_g": 1.2, "sodium_mg": 280, "potassium_mg": 80}
+    },
+    {
+      "id": "poha",
+      "name": "Poha (flattened rice, cooked)",
+      "category": "grains",
+      "aliases": ["pohe", "kanda poha"],
+      "typical_grams": 200,
+      "typical_label": "1 plate",
+      "per_100g": {"kcal": 130, "protein_g": 2.5, "carb_g": 25.0, "fiber_g": 1.2, "sugar_g": 1.0, "fat_g": 2.5, "sat_fat_g": 0.4, "sodium_mg": 240, "potassium_mg": 70}
+    },
+    {
+      "id": "upma",
+      "name": "Upma (semolina, cooked)",
+      "category": "grains",
+      "aliases": ["uppma", "rava upma"],
+      "typical_grams": 200,
+      "typical_label": "1 plate",
+      "per_100g": {"kcal": 145, "protein_g": 3.5, "carb_g": 22.0, "fiber_g": 1.6, "sugar_g": 1.2, "fat_g": 4.5, "sat_fat_g": 0.8, "sodium_mg": 300, "potassium_mg": 95}
+    },
+    {
+      "id": "bread_whole_wheat",
+      "name": "Bread, whole wheat",
+      "category": "grains",
+      "aliases": ["brown bread", "wheat bread"],
+      "typical_grams": 30,
+      "typical_label": "1 slice",
+      "per_100g": {"kcal": 247, "protein_g": 13.0, "carb_g": 41.0, "fiber_g": 7.0, "sugar_g": 5.6, "fat_g": 3.4, "sat_fat_g": 0.7, "sodium_mg": 450, "potassium_mg": 254}
+    },
+    {
+      "id": "bread_white",
+      "name": "Bread, white",
+      "category": "grains",
+      "aliases": ["white bread"],
+      "typical_grams": 28,
+      "typical_label": "1 slice",
+      "per_100g": {"kcal": 265, "protein_g": 9.0, "carb_g": 49.0, "fiber_g": 2.7, "sugar_g": 5.0, "fat_g": 3.2, "sat_fat_g": 0.7, "sodium_mg": 490, "potassium_mg": 115}
+    },
+    {
+      "id": "oats_dry",
+      "name": "Oats, rolled, dry",
+      "category": "grains",
+      "aliases": ["oats", "rolled oats", "oatmeal dry"],
+      "typical_grams": 40,
+      "typical_label": "1/2 cup dry",
+      "per_100g": {"kcal": 389, "protein_g": 16.9, "carb_g": 66.3, "fiber_g": 10.6, "sugar_g": 1.0, "fat_g": 6.9, "sat_fat_g": 1.2, "sodium_mg": 2, "potassium_mg": 429}
+    },
+    {
+      "id": "pasta_cooked",
+      "name": "Pasta, cooked",
+      "category": "grains",
+      "aliases": ["pasta", "spaghetti", "penne", "macaroni"],
+      "typical_grams": 200,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 158, "protein_g": 5.8, "carb_g": 30.9, "fiber_g": 1.8, "sugar_g": 0.6, "fat_g": 0.9, "sat_fat_g": 0.2, "sodium_mg": 1, "potassium_mg": 44}
+    },
+    {
+      "id": "quinoa_cooked",
+      "name": "Quinoa, cooked",
+      "category": "grains",
+      "aliases": ["quinoa"],
+      "typical_grams": 185,
+      "typical_label": "1 cup cooked",
+      "per_100g": {"kcal": 120, "protein_g": 4.4, "carb_g": 21.3, "fiber_g": 2.8, "sugar_g": 0.9, "fat_g": 1.9, "sat_fat_g": 0.2, "sodium_mg": 7, "potassium_mg": 172}
+    },
+    {
+      "id": "potato_boiled",
+      "name": "Potato, boiled",
+      "category": "vegetables",
+      "aliases": ["potato", "aloo", "boiled potato"],
+      "typical_grams": 150,
+      "typical_label": "1 medium",
+      "per_100g": {"kcal": 87, "protein_g": 1.9, "carb_g": 20.1, "fiber_g": 1.8, "sugar_g": 0.9, "fat_g": 0.1, "sat_fat_g": 0.0, "sodium_mg": 4, "potassium_mg": 379}
+    },
+    {
+      "id": "sweet_potato_boiled",
+      "name": "Sweet potato, boiled",
+      "category": "vegetables",
+      "aliases": ["sweet potato", "shakarkandi"],
+      "typical_grams": 150,
+      "typical_label": "1 medium",
+      "per_100g": {"kcal": 76, "protein_g": 1.4, "carb_g": 17.7, "fiber_g": 2.5, "sugar_g": 5.7, "fat_g": 0.1, "sat_fat_g": 0.0, "sodium_mg": 27, "potassium_mg": 230}
+    },
+    {
+      "id": "dal_plain",
+      "name": "Dal, cooked plain (toor / arhar)",
+      "category": "legumes",
+      "aliases": ["dal", "daal", "toor dal", "arhar dal", "lentil curry"],
+      "typical_grams": 200,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 116, "protein_g": 7.0, "carb_g": 20.0, "fiber_g": 4.8, "sugar_g": 1.0, "fat_g": 0.5, "sat_fat_g": 0.1, "sodium_mg": 240, "potassium_mg": 300}
+    },
+    {
+      "id": "dal_tadka",
+      "name": "Dal tadka (with ghee / oil tempering)",
+      "category": "legumes",
+      "aliases": ["dal fry", "tadka dal"],
+      "typical_grams": 200,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 145, "protein_g": 6.5, "carb_g": 18.0, "fiber_g": 4.5, "sugar_g": 1.2, "fat_g": 5.5, "sat_fat_g": 1.8, "sodium_mg": 380, "potassium_mg": 290}
+    },
+    {
+      "id": "dal_moong_cooked",
+      "name": "Moong dal, cooked",
+      "category": "legumes",
+      "aliases": ["moong dal", "mung dal", "yellow moong"],
+      "typical_grams": 200,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 105, "protein_g": 7.0, "carb_g": 19.0, "fiber_g": 7.6, "sugar_g": 2.0, "fat_g": 0.4, "sat_fat_g": 0.1, "sodium_mg": 230, "potassium_mg": 266}
+    },
+    {
+      "id": "rajma_cooked",
+      "name": "Rajma (kidney beans, cooked curry)",
+      "category": "legumes",
+      "aliases": ["rajma", "kidney beans"],
+      "typical_grams": 200,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 140, "protein_g": 8.0, "carb_g": 21.0, "fiber_g": 6.4, "sugar_g": 1.2, "fat_g": 2.8, "sat_fat_g": 0.6, "sodium_mg": 330, "potassium_mg": 405}
+    },
+    {
+      "id": "chole_cooked",
+      "name": "Chole / chana masala (chickpea curry)",
+      "category": "legumes",
+      "aliases": ["chole", "chana masala", "chickpea curry", "chana"],
+      "typical_grams": 200,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 164, "protein_g": 8.0, "carb_g": 22.0, "fiber_g": 6.6, "sugar_g": 3.4, "fat_g": 4.8, "sat_fat_g": 0.8, "sodium_mg": 380, "potassium_mg": 291}
+    },
+    {
+      "id": "lentils_cooked",
+      "name": "Lentils (masoor), cooked",
+      "category": "legumes",
+      "aliases": ["masoor dal", "red lentils", "lentils"],
+      "typical_grams": 200,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 116, "protein_g": 9.0, "carb_g": 20.1, "fiber_g": 7.9, "sugar_g": 1.8, "fat_g": 0.4, "sat_fat_g": 0.1, "sodium_mg": 238, "potassium_mg": 369}
+    },
+    {
+      "id": "sambar",
+      "name": "Sambar",
+      "category": "legumes",
+      "aliases": ["sambhar"],
+      "typical_grams": 150,
+      "typical_label": "1 small bowl",
+      "per_100g": {"kcal": 85, "protein_g": 3.5, "carb_g": 11.0, "fiber_g": 3.0, "sugar_g": 2.0, "fat_g": 3.0, "sat_fat_g": 0.5, "sodium_mg": 400, "potassium_mg": 250}
+    },
+    {
+      "id": "tofu_firm",
+      "name": "Tofu, firm",
+      "category": "protein",
+      "aliases": ["tofu"],
+      "typical_grams": 100,
+      "typical_label": "1 slab",
+      "per_100g": {"kcal": 144, "protein_g": 17.3, "carb_g": 2.8, "fiber_g": 2.3, "sugar_g": 0.6, "fat_g": 8.7, "sat_fat_g": 1.3, "sodium_mg": 14, "potassium_mg": 237}
+    },
+    {
+      "id": "soya_chunks_dry",
+      "name": "Soya chunks, dry",
+      "category": "protein",
+      "aliases": ["soya chunks", "soy nuggets", "meal maker"],
+      "typical_grams": 30,
+      "typical_label": "handful dry",
+      "per_100g": {"kcal": 345, "protein_g": 52.0, "carb_g": 33.0, "fiber_g": 13.0, "sugar_g": 6.0, "fat_g": 0.5, "sat_fat_g": 0.1, "sodium_mg": 20, "potassium_mg": 1800}
+    },
+    {
+      "id": "paneer",
+      "name": "Paneer (full fat)",
+      "category": "dairy",
+      "aliases": ["paneer", "cottage cheese indian"],
+      "typical_grams": 100,
+      "typical_label": "6-7 cubes",
+      "per_100g": {"kcal": 296, "protein_g": 18.3, "carb_g": 3.6, "fiber_g": 0.0, "sugar_g": 3.6, "fat_g": 22.8, "sat_fat_g": 14.5, "sodium_mg": 22, "potassium_mg": 130}
+    },
+    {
+      "id": "palak_paneer",
+      "name": "Palak paneer",
+      "category": "mixed",
+      "aliases": ["palak paneer", "spinach paneer"],
+      "typical_grams": 200,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 180, "protein_g": 8.0, "carb_g": 6.0, "fiber_g": 2.5, "sugar_g": 2.5, "fat_g": 14.0, "sat_fat_g": 6.0, "sodium_mg": 420, "potassium_mg": 380}
+    },
+    {
+      "id": "paneer_butter_masala",
+      "name": "Paneer butter masala",
+      "category": "mixed",
+      "aliases": ["paneer makhani", "shahi paneer"],
+      "typical_grams": 200,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 235, "protein_g": 8.5, "carb_g": 9.0, "fiber_g": 1.6, "sugar_g": 5.0, "fat_g": 18.5, "sat_fat_g": 9.0, "sodium_mg": 470, "potassium_mg": 250}
+    },
+    {
+      "id": "milk_whole",
+      "name": "Milk, whole (full cream)",
+      "category": "dairy",
+      "aliases": ["milk", "full cream milk", "doodh"],
+      "typical_grams": 240,
+      "typical_label": "1 glass",
+      "per_100g": {"kcal": 61, "protein_g": 3.2, "carb_g": 4.8, "fiber_g": 0.0, "sugar_g": 4.8, "fat_g": 3.3, "sat_fat_g": 1.9, "sodium_mg": 43, "potassium_mg": 150}
+    },
+    {
+      "id": "milk_toned",
+      "name": "Milk, toned (1.5% fat)",
+      "category": "dairy",
+      "aliases": ["toned milk", "skim milk", "low fat milk"],
+      "typical_grams": 240,
+      "typical_label": "1 glass",
+      "per_100g": {"kcal": 48, "protein_g": 3.3, "carb_g": 4.9, "fiber_g": 0.0, "sugar_g": 4.9, "fat_g": 1.5, "sat_fat_g": 0.9, "sodium_mg": 44, "potassium_mg": 156}
+    },
+    {
+      "id": "curd",
+      "name": "Curd / dahi (whole milk yogurt)",
+      "category": "dairy",
+      "aliases": ["curd", "dahi", "yogurt", "yoghurt"],
+      "typical_grams": 150,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 61, "protein_g": 3.5, "carb_g": 4.7, "fiber_g": 0.0, "sugar_g": 4.7, "fat_g": 3.3, "sat_fat_g": 2.1, "sodium_mg": 46, "potassium_mg": 155}
+    },
+    {
+      "id": "greek_yogurt_nonfat",
+      "name": "Greek yogurt, plain, non-fat",
+      "category": "dairy",
+      "aliases": ["greek yogurt"],
+      "typical_grams": 170,
+      "typical_label": "1 cup",
+      "per_100g": {"kcal": 59, "protein_g": 10.3, "carb_g": 3.6, "fiber_g": 0.0, "sugar_g": 3.2, "fat_g": 0.4, "sat_fat_g": 0.1, "sodium_mg": 36, "potassium_mg": 141}
+    },
+    {
+      "id": "cheese_cheddar",
+      "name": "Cheese, cheddar",
+      "category": "dairy",
+      "aliases": ["cheese", "cheddar"],
+      "typical_grams": 20,
+      "typical_label": "1 slice",
+      "per_100g": {"kcal": 403, "protein_g": 24.9, "carb_g": 1.3, "fiber_g": 0.0, "sugar_g": 0.5, "fat_g": 33.1, "sat_fat_g": 21.0, "sodium_mg": 621, "potassium_mg": 98}
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee",
+      "category": "fats",
+      "aliases": ["ghee", "clarified butter"],
+      "typical_grams": 5,
+      "typical_label": "1 tsp",
+      "per_100g": {"kcal": 900, "protein_g": 0.0, "carb_g": 0.0, "fiber_g": 0.0, "sugar_g": 0.0, "fat_g": 100.0, "sat_fat_g": 62.0, "sodium_mg": 2, "potassium_mg": 5}
+    },
+    {
+      "id": "butter_salted",
+      "name": "Butter, salted",
+      "category": "fats",
+      "aliases": ["butter", "makhan"],
+      "typical_grams": 10,
+      "typical_label": "1 tbsp",
+      "per_100g": {"kcal": 717, "protein_g": 0.9, "carb_g": 0.1, "fiber_g": 0.0, "sugar_g": 0.1, "fat_g": 81.1, "sat_fat_g": 51.4, "sodium_mg": 643, "potassium_mg": 24}
+    },
+    {
+      "id": "oil_mustard",
+      "name": "Mustard oil",
+      "category": "fats",
+      "aliases": ["mustard oil", "sarson oil", "cooking oil"],
+      "typical_grams": 5,
+      "typical_label": "1 tsp",
+      "per_100g": {"kcal": 884, "protein_g": 0.0, "carb_g": 0.0, "fiber_g": 0.0, "sugar_g": 0.0, "fat_g": 100.0, "sat_fat_g": 11.6, "sodium_mg": 0, "potassium_mg": 0}
+    },
+    {
+      "id": "oil_olive",
+      "name": "Olive oil",
+      "category": "fats",
+      "aliases": ["olive oil"],
+      "typical_grams": 5,
+      "typical_label": "1 tsp",
+      "per_100g": {"kcal": 884, "protein_g": 0.0, "carb_g": 0.0, "fiber_g": 0.0, "sugar_g": 0.0, "fat_g": 100.0, "sat_fat_g": 13.8, "sodium_mg": 2, "potassium_mg": 1}
+    },
+    {
+      "id": "egg_boiled",
+      "name": "Egg, whole, boiled",
+      "category": "protein",
+      "aliases": ["egg", "boiled egg", "eggs", "anda"],
+      "typical_grams": 50,
+      "typical_label": "1 large egg",
+      "per_100g": {"kcal": 155, "protein_g": 12.6, "carb_g": 1.1, "fiber_g": 0.0, "sugar_g": 1.1, "fat_g": 10.6, "sat_fat_g": 3.3, "sodium_mg": 124, "potassium_mg": 126}
+    },
+    {
+      "id": "egg_white",
+      "name": "Egg white, cooked",
+      "category": "protein",
+      "aliases": ["egg white", "egg whites"],
+      "typical_grams": 33,
+      "typical_label": "1 large egg white",
+      "per_100g": {"kcal": 52, "protein_g": 10.9, "carb_g": 0.7, "fiber_g": 0.0, "sugar_g": 0.7, "fat_g": 0.2, "sat_fat_g": 0.0, "sodium_mg": 166, "potassium_mg": 163}
+    },
+    {
+      "id": "omelette",
+      "name": "Omelette (2 eggs, cooked in oil)",
+      "category": "protein",
+      "aliases": ["omelette", "omelet", "bhurji"],
+      "typical_grams": 120,
+      "typical_label": "2-egg omelette",
+      "per_100g": {"kcal": 195, "protein_g": 12.0, "carb_g": 2.0, "fiber_g": 0.3, "sugar_g": 1.2, "fat_g": 15.0, "sat_fat_g": 4.2, "sodium_mg": 280, "potassium_mg": 160}
+    },
+    {
+      "id": "chicken_breast_cooked",
+      "name": "Chicken breast, cooked, skinless",
+      "category": "protein",
+      "aliases": ["chicken breast", "grilled chicken", "chicken"],
+      "typical_grams": 150,
+      "typical_label": "1 fillet",
+      "per_100g": {"kcal": 165, "protein_g": 31.0, "carb_g": 0.0, "fiber_g": 0.0, "sugar_g": 0.0, "fat_g": 3.6, "sat_fat_g": 1.0, "sodium_mg": 74, "potassium_mg": 256}
+    },
+    {
+      "id": "chicken_thigh_cooked",
+      "name": "Chicken thigh, cooked",
+      "category": "protein",
+      "aliases": ["chicken thigh", "chicken leg"],
+      "typical_grams": 120,
+      "typical_label": "1 thigh",
+      "per_100g": {"kcal": 209, "protein_g": 26.0, "carb_g": 0.0, "fiber_g": 0.0, "sugar_g": 0.0, "fat_g": 10.9, "sat_fat_g": 3.0, "sodium_mg": 88, "potassium_mg": 230}
+    },
+    {
+      "id": "chicken_curry",
+      "name": "Chicken curry, home-style",
+      "category": "mixed",
+      "aliases": ["chicken curry", "chicken masala", "murgh curry"],
+      "typical_grams": 250,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 180, "protein_g": 15.0, "carb_g": 5.0, "fiber_g": 1.2, "sugar_g": 2.2, "fat_g": 11.0, "sat_fat_g": 3.0, "sodium_mg": 420, "potassium_mg": 250}
+    },
+    {
+      "id": "butter_chicken",
+      "name": "Butter chicken",
+      "category": "mixed",
+      "aliases": ["butter chicken", "murgh makhani"],
+      "typical_grams": 250,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 240, "protein_g": 14.0, "carb_g": 6.0, "fiber_g": 1.0, "sugar_g": 4.0, "fat_g": 18.0, "sat_fat_g": 8.0, "sodium_mg": 450, "potassium_mg": 220}
+    },
+    {
+      "id": "mutton_curry",
+      "name": "Mutton curry",
+      "category": "mixed",
+      "aliases": ["mutton curry", "lamb curry", "goat curry"],
+      "typical_grams": 250,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 230, "protein_g": 17.0, "carb_g": 4.0, "fiber_g": 1.0, "sugar_g": 1.8, "fat_g": 16.0, "sat_fat_g": 6.0, "sodium_mg": 430, "potassium_mg": 240}
+    },
+    {
+      "id": "fish_cooked_lean",
+      "name": "Fish, lean (rohu / tilapia), cooked",
+      "category": "protein",
+      "aliases": ["fish", "rohu", "tilapia", "fish curry lean"],
+      "typical_grams": 150,
+      "typical_label": "1 fillet",
+      "per_100g": {"kcal": 128, "protein_g": 26.0, "carb_g": 0.0, "fiber_g": 0.0, "sugar_g": 0.0, "fat_g": 2.7, "sat_fat_g": 0.9, "sodium_mg": 56, "potassium_mg": 380}
+    },
+    {
+      "id": "salmon_cooked",
+      "name": "Salmon, cooked",
+      "category": "protein",
+      "aliases": ["salmon"],
+      "typical_grams": 150,
+      "typical_label": "1 fillet",
+      "per_100g": {"kcal": 208, "protein_g": 20.4, "carb_g": 0.0, "fiber_g": 0.0, "sugar_g": 0.0, "fat_g": 13.4, "sat_fat_g": 3.1, "sodium_mg": 59, "potassium_mg": 363}
+    },
+    {
+      "id": "prawns_cooked",
+      "name": "Prawns / shrimp, cooked",
+      "category": "protein",
+      "aliases": ["prawns", "shrimp", "jhinga"],
+      "typical_grams": 120,
+      "typical_label": "1 serving",
+      "per_100g": {"kcal": 99, "protein_g": 24.0, "carb_g": 0.2, "fiber_g": 0.0, "sugar_g": 0.0, "fat_g": 0.3, "sat_fat_g": 0.1, "sodium_mg": 111, "potassium_mg": 259}
+    },
+    {
+      "id": "whey_protein",
+      "name": "Whey protein powder",
+      "category": "protein",
+      "aliases": ["whey", "protein powder", "protein shake powder"],
+      "typical_grams": 30,
+      "typical_label": "1 scoop",
+      "per_100g": {"kcal": 400, "protein_g": 80.0, "carb_g": 8.0, "fiber_g": 1.0, "sugar_g": 4.0, "fat_g": 6.0, "sat_fat_g": 2.0, "sodium_mg": 300, "potassium_mg": 500}
+    },
+    {
+      "id": "mixed_veg_sabzi",
+      "name": "Mixed vegetable sabzi (with oil)",
+      "category": "vegetables",
+      "aliases": ["sabzi", "mixed veg", "vegetable curry", "subzi"],
+      "typical_grams": 150,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 110, "protein_g": 2.5, "carb_g": 10.0, "fiber_g": 3.5, "sugar_g": 4.0, "fat_g": 6.5, "sat_fat_g": 1.0, "sodium_mg": 330, "potassium_mg": 300}
+    },
+    {
+      "id": "aloo_sabzi",
+      "name": "Aloo sabzi (potato curry)",
+      "category": "vegetables",
+      "aliases": ["aloo sabzi", "potato sabzi", "aloo curry"],
+      "typical_grams": 150,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 140, "protein_g": 2.2, "carb_g": 18.0, "fiber_g": 2.5, "sugar_g": 1.6, "fat_g": 6.5, "sat_fat_g": 1.0, "sodium_mg": 350, "potassium_mg": 380}
+    },
+    {
+      "id": "bhindi_fry",
+      "name": "Bhindi fry (okra, sauteed)",
+      "category": "vegetables",
+      "aliases": ["bhindi", "okra", "ladyfinger"],
+      "typical_grams": 150,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 135, "protein_g": 2.0, "carb_g": 8.0, "fiber_g": 3.5, "sugar_g": 1.8, "fat_g": 10.0, "sat_fat_g": 1.4, "sodium_mg": 300, "potassium_mg": 300}
+    },
+    {
+      "id": "spinach_raw",
+      "name": "Spinach, raw",
+      "category": "vegetables",
+      "aliases": ["spinach", "palak"],
+      "typical_grams": 100,
+      "typical_label": "2 cups",
+      "per_100g": {"kcal": 23, "protein_g": 2.9, "carb_g": 3.6, "fiber_g": 2.2, "sugar_g": 0.4, "fat_g": 0.4, "sat_fat_g": 0.1, "sodium_mg": 79, "potassium_mg": 558}
+    },
+    {
+      "id": "broccoli_cooked",
+      "name": "Broccoli, cooked",
+      "category": "vegetables",
+      "aliases": ["broccoli"],
+      "typical_grams": 100,
+      "typical_label": "1 cup",
+      "per_100g": {"kcal": 35, "protein_g": 2.4, "carb_g": 7.2, "fiber_g": 3.3, "sugar_g": 1.4, "fat_g": 0.4, "sat_fat_g": 0.1, "sodium_mg": 41, "potassium_mg": 293}
+    },
+    {
+      "id": "cauliflower_cooked",
+      "name": "Cauliflower, cooked",
+      "category": "vegetables",
+      "aliases": ["cauliflower", "gobi"],
+      "typical_grams": 120,
+      "typical_label": "1 cup",
+      "per_100g": {"kcal": 23, "protein_g": 1.8, "carb_g": 4.1, "fiber_g": 2.3, "sugar_g": 1.9, "fat_g": 0.5, "sat_fat_g": 0.1, "sodium_mg": 15, "potassium_mg": 142}
+    },
+    {
+      "id": "salad_green",
+      "name": "Green salad (mixed, undressed)",
+      "category": "vegetables",
+      "aliases": ["salad", "green salad"],
+      "typical_grams": 100,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 20, "protein_g": 1.3, "carb_g": 3.5, "fiber_g": 1.8, "sugar_g": 1.8, "fat_g": 0.2, "sat_fat_g": 0.0, "sodium_mg": 25, "potassium_mg": 250}
+    },
+    {
+      "id": "tomato_raw",
+      "name": "Tomato, raw",
+      "category": "vegetables",
+      "aliases": ["tomato", "tamatar"],
+      "typical_grams": 100,
+      "typical_label": "1 medium",
+      "per_100g": {"kcal": 18, "protein_g": 0.9, "carb_g": 3.9, "fiber_g": 1.2, "sugar_g": 2.6, "fat_g": 0.2, "sat_fat_g": 0.0, "sodium_mg": 5, "potassium_mg": 237}
+    },
+    {
+      "id": "onion_raw",
+      "name": "Onion, raw",
+      "category": "vegetables",
+      "aliases": ["onion", "pyaz"],
+      "typical_grams": 80,
+      "typical_label": "1 medium",
+      "per_100g": {"kcal": 40, "protein_g": 1.1, "carb_g": 9.3, "fiber_g": 1.7, "sugar_g": 4.2, "fat_g": 0.1, "sat_fat_g": 0.0, "sodium_mg": 4, "potassium_mg": 146}
+    },
+    {
+      "id": "cucumber_raw",
+      "name": "Cucumber, raw",
+      "category": "vegetables",
+      "aliases": ["cucumber", "kheera"],
+      "typical_grams": 100,
+      "typical_label": "1/2 cucumber",
+      "per_100g": {"kcal": 15, "protein_g": 0.7, "carb_g": 3.6, "fiber_g": 0.5, "sugar_g": 1.7, "fat_g": 0.1, "sat_fat_g": 0.0, "sodium_mg": 2, "potassium_mg": 147}
+    },
+    {
+      "id": "carrot_raw",
+      "name": "Carrot, raw",
+      "category": "vegetables",
+      "aliases": ["carrot", "gajar"],
+      "typical_grams": 80,
+      "typical_label": "1 medium",
+      "per_100g": {"kcal": 41, "protein_g": 0.9, "carb_g": 9.6, "fiber_g": 2.8, "sugar_g": 4.7, "fat_g": 0.2, "sat_fat_g": 0.0, "sodium_mg": 69, "potassium_mg": 320}
+    },
+    {
+      "id": "capsicum_raw",
+      "name": "Capsicum / bell pepper, raw",
+      "category": "vegetables",
+      "aliases": ["capsicum", "bell pepper", "shimla mirch"],
+      "typical_grams": 100,
+      "typical_label": "1 medium",
+      "per_100g": {"kcal": 31, "protein_g": 1.0, "carb_g": 6.0, "fiber_g": 2.1, "sugar_g": 4.2, "fat_g": 0.3, "sat_fat_g": 0.1, "sodium_mg": 4, "potassium_mg": 211}
+    },
+    {
+      "id": "banana",
+      "name": "Banana",
+      "category": "fruits",
+      "aliases": ["banana", "kela"],
+      "typical_grams": 120,
+      "typical_label": "1 medium",
+      "per_100g": {"kcal": 89, "protein_g": 1.1, "carb_g": 22.8, "fiber_g": 2.6, "sugar_g": 12.2, "fat_g": 0.3, "sat_fat_g": 0.1, "sodium_mg": 1, "potassium_mg": 358}
+    },
+    {
+      "id": "apple",
+      "name": "Apple, with skin",
+      "category": "fruits",
+      "aliases": ["apple", "seb"],
+      "typical_grams": 180,
+      "typical_label": "1 medium",
+      "per_100g": {"kcal": 52, "protein_g": 0.3, "carb_g": 13.8, "fiber_g": 2.4, "sugar_g": 10.4, "fat_g": 0.2, "sat_fat_g": 0.0, "sodium_mg": 1, "potassium_mg": 107}
+    },
+    {
+      "id": "mango",
+      "name": "Mango",
+      "category": "fruits",
+      "aliases": ["mango", "aam"],
+      "typical_grams": 200,
+      "typical_label": "1 medium",
+      "per_100g": {"kcal": 60, "protein_g": 0.8, "carb_g": 15.0, "fiber_g": 1.6, "sugar_g": 13.7, "fat_g": 0.4, "sat_fat_g": 0.1, "sodium_mg": 1, "potassium_mg": 168}
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "category": "fruits",
+      "aliases": ["orange", "santra"],
+      "typical_grams": 130,
+      "typical_label": "1 medium",
+      "per_100g": {"kcal": 47, "protein_g": 0.9, "carb_g": 11.8, "fiber_g": 2.4, "sugar_g": 9.4, "fat_g": 0.1, "sat_fat_g": 0.0, "sodium_mg": 0, "potassium_mg": 181}
+    },
+    {
+      "id": "papaya",
+      "name": "Papaya",
+      "category": "fruits",
+      "aliases": ["papaya", "papita"],
+      "typical_grams": 150,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 43, "protein_g": 0.5, "carb_g": 10.8, "fiber_g": 1.7, "sugar_g": 7.8, "fat_g": 0.3, "sat_fat_g": 0.1, "sodium_mg": 8, "potassium_mg": 182}
+    },
+    {
+      "id": "guava",
+      "name": "Guava",
+      "category": "fruits",
+      "aliases": ["guava", "amrud"],
+      "typical_grams": 120,
+      "typical_label": "1 medium",
+      "per_100g": {"kcal": 68, "protein_g": 2.6, "carb_g": 14.3, "fiber_g": 5.4, "sugar_g": 8.9, "fat_g": 1.0, "sat_fat_g": 0.3, "sodium_mg": 2, "potassium_mg": 417}
+    },
+    {
+      "id": "pomegranate",
+      "name": "Pomegranate seeds",
+      "category": "fruits",
+      "aliases": ["pomegranate", "anar"],
+      "typical_grams": 120,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 83, "protein_g": 1.7, "carb_g": 18.7, "fiber_g": 4.0, "sugar_g": 13.7, "fat_g": 1.2, "sat_fat_g": 0.1, "sodium_mg": 3, "potassium_mg": 236}
+    },
+    {
+      "id": "grapes",
+      "name": "Grapes",
+      "category": "fruits",
+      "aliases": ["grapes", "angoor"],
+      "typical_grams": 100,
+      "typical_label": "1 small bunch",
+      "per_100g": {"kcal": 69, "protein_g": 0.7, "carb_g": 18.1, "fiber_g": 0.9, "sugar_g": 15.5, "fat_g": 0.2, "sat_fat_g": 0.1, "sodium_mg": 2, "potassium_mg": 191}
+    },
+    {
+      "id": "watermelon",
+      "name": "Watermelon",
+      "category": "fruits",
+      "aliases": ["watermelon", "tarbooz"],
+      "typical_grams": 200,
+      "typical_label": "1 bowl",
+      "per_100g": {"kcal": 30, "protein_g": 0.6, "carb_g": 7.6, "fiber_g": 0.4, "sugar_g": 6.2, "fat_g": 0.2, "sat_fat_g": 0.0, "sodium_mg": 1, "potassium_mg": 112}
+    },
+    {
+      "id": "avocado",
+      "name": "Avocado",
+      "category": "fruits",
+      "aliases": ["avocado"],
+      "typical_grams": 100,
+      "typical_label": "1/2 avocado",
+      "per_100g": {"kcal": 160, "protein_g": 2.0, "carb_g": 8.5, "fiber_g": 6.7, "sugar_g": 0.7, "fat_g": 14.7, "sat_fat_g": 2.1, "sodium_mg": 7, "potassium_mg": 485}
+    },
+    {
+      "id": "dates",
+      "name": "Dates, dried",
+      "category": "fruits",
+      "aliases": ["dates", "khajoor"],
+      "typical_grams": 24,
+      "typical_label": "3 dates",
+      "per_100g": {"kcal": 277, "protein_g": 1.8, "carb_g": 75.0, "fiber_g": 6.7, "sugar_g": 66.5, "fat_g": 0.2, "sat_fat_g": 0.0, "sodium_mg": 1, "potassium_mg": 696}
+    },
+    {
+      "id": "almonds",
+      "name": "Almonds",
+      "category": "nuts",
+      "aliases": ["almonds", "badam"],
+      "typical_grams": 15,
+      "typical_label": "10-12 almonds",
+      "per_100g": {"kcal": 579, "protein_g": 21.2, "carb_g": 21.6, "fiber_g": 12.5, "sugar_g": 4.4, "fat_g": 49.9, "sat_fat_g": 3.8, "sodium_mg": 1, "potassium_mg": 733}
+    },
+    {
+      "id": "walnuts",
+      "name": "Walnuts",
+      "category": "nuts",
+      "aliases": ["walnuts", "akhrot"],
+      "typical_grams": 15,
+      "typical_label": "4 halves",
+      "per_100g": {"kcal": 654, "protein_g": 15.2, "carb_g": 13.7, "fiber_g": 6.7, "sugar_g": 2.6, "fat_g": 65.2, "sat_fat_g": 6.1, "sodium_mg": 2, "potassium_mg": 441}
+    },
+    {
+      "id": "cashews",
+      "name": "Cashews",
+      "category": "nuts",
+      "aliases": ["cashews", "kaju"],
+      "typical_grams": 15,
+      "typical_label": "8-10 cashews",
+      "per_100g": {"kcal": 553, "protein_g": 18.2, "carb_g": 30.2, "fiber_g": 3.3, "sugar_g": 5.9, "fat_g": 43.9, "sat_fat_g": 7.8, "sodium_mg": 12, "potassium_mg": 660}
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts, roasted",
+      "category": "nuts",
+      "aliases": ["peanuts", "moongfali", "groundnuts"],
+      "typical_grams": 30,
+      "typical_label": "small handful",
+      "per_100g": {"kcal": 567, "protein_g": 25.8, "carb_g": 16.1, "fiber_g": 8.5, "sugar_g": 4.7, "fat_g": 49.2, "sat_fat_g": 6.3, "sodium_mg": 18, "potassium_mg": 705}
+    },
+    {
+      "id": "peanut_butter",
+      "name": "Peanut butter",
+      "category": "nuts",
+      "aliases": ["peanut butter"],
+      "typical_grams": 16,
+      "typical_label": "1 tbsp",
+      "per_100g": {"kcal": 588, "protein_g": 25.1, "carb_g": 20.0, "fiber_g": 6.0, "sugar_g": 9.0, "fat_g": 50.4, "sat_fat_g": 10.3, "sodium_mg": 429, "potassium_mg": 649}
+    },
+    {
+      "id": "chia_seeds",
+      "name": "Chia seeds",
+      "category": "nuts",
+      "aliases": ["chia", "chia seeds"],
+      "typical_grams": 12,
+      "typical_label": "1 tbsp",
+      "per_100g": {"kcal": 486, "protein_g": 16.5, "carb_g": 42.1, "fiber_g": 34.4, "sugar_g": 0.0, "fat_g": 30.7, "sat_fat_g": 3.3, "sodium_mg": 16, "potassium_mg": 407}
+    },
+    {
+      "id": "flax_seeds",
+      "name": "Flax seeds",
+      "category": "nuts",
+      "aliases": ["flaxseed", "flax seeds", "alsi"],
+      "typical_grams": 10,
+      "typical_label": "1 tbsp",
+      "per_100g": {"kcal": 534, "protein_g": 18.3, "carb_g": 28.9, "fiber_g": 27.3, "sugar_g": 1.6, "fat_g": 42.2, "sat_fat_g": 3.7, "sodium_mg": 30, "potassium_mg": 813}
+    },
+    {
+      "id": "samosa",
+      "name": "Samosa, fried",
+      "category": "snacks",
+      "aliases": ["samosa", "samose"],
+      "typical_grams": 65,
+      "typical_label": "1 samosa",
+      "per_100g": {"kcal": 308, "protein_g": 5.0, "carb_g": 32.0, "fiber_g": 2.5, "sugar_g": 1.5, "fat_g": 17.5, "sat_fat_g": 5.0, "sodium_mg": 420, "potassium_mg": 200}
+    },
+    {
+      "id": "pakora",
+      "name": "Pakora / bhajiya, fried",
+      "category": "snacks",
+      "aliases": ["pakora", "pakoda", "bhajiya", "bhaji"],
+      "typical_grams": 60,
+      "typical_label": "4-5 pieces",
+      "per_100g": {"kcal": 315, "protein_g": 7.0, "carb_g": 26.0, "fiber_g": 4.0, "sugar_g": 2.0, "fat_g": 20.0, "sat_fat_g": 3.0, "sodium_mg": 450, "potassium_mg": 280}
+    },
+    {
+      "id": "pizza_cheese",
+      "name": "Pizza, cheese",
+      "category": "snacks",
+      "aliases": ["pizza"],
+      "typical_grams": 110,
+      "typical_label": "1 slice",
+      "per_100g": {"kcal": 266, "protein_g": 11.0, "carb_g": 33.0, "fiber_g": 2.3, "sugar_g": 3.6, "fat_g": 10.0, "sat_fat_g": 4.5, "sodium_mg": 598, "potassium_mg": 184}
+    },
+    {
+      "id": "potato_chips",
+      "name": "Potato chips",
+      "category": "snacks",
+      "aliases": ["chips", "potato chips", "crisps"],
+      "typical_grams": 30,
+      "typical_label": "small packet",
+      "per_100g": {"kcal": 536, "protein_g": 7.0, "carb_g": 53.0, "fiber_g": 4.4, "sugar_g": 0.3, "fat_g": 34.0, "sat_fat_g": 3.6, "sodium_mg": 525, "potassium_mg": 1275}
+    },
+    {
+      "id": "biscuit_marie",
+      "name": "Biscuits, Marie / digestive",
+      "category": "snacks",
+      "aliases": ["biscuit", "biscuits", "marie biscuit", "cookies"],
+      "typical_grams": 20,
+      "typical_label": "4 biscuits",
+      "per_100g": {"kcal": 440, "protein_g": 7.0, "carb_g": 74.0, "fiber_g": 2.5, "sugar_g": 20.0, "fat_g": 13.0, "sat_fat_g": 6.0, "sodium_mg": 420, "potassium_mg": 150}
+    },
+    {
+      "id": "protein_bar",
+      "name": "Protein bar",
+      "category": "snacks",
+      "aliases": ["protein bar"],
+      "typical_grams": 60,
+      "typical_label": "1 bar",
+      "per_100g": {"kcal": 380, "protein_g": 30.0, "carb_g": 40.0, "fiber_g": 5.0, "sugar_g": 12.0, "fat_g": 11.0, "sat_fat_g": 4.0, "sodium_mg": 250, "potassium_mg": 300}
+    },
+    {
+      "id": "dark_chocolate_70",
+      "name": "Dark chocolate, 70%",
+      "category": "sweets",
+      "aliases": ["dark chocolate", "chocolate"],
+      "typical_grams": 20,
+      "typical_label": "2 squares",
+      "per_100g": {"kcal": 598, "protein_g": 7.8, "carb_g": 45.9, "fiber_g": 11.0, "sugar_g": 24.0, "fat_g": 42.6, "sat_fat_g": 24.5, "sodium_mg": 20, "potassium_mg": 715}
+    },
+    {
+      "id": "gulab_jamun",
+      "name": "Gulab jamun",
+      "category": "sweets",
+      "aliases": ["gulab jamun", "gulabjamun"],
+      "typical_grams": 45,
+      "typical_label": "1 piece",
+      "per_100g": {"kcal": 340, "protein_g": 4.0, "carb_g": 48.0, "fiber_g": 0.5, "sugar_g": 40.0, "fat_g": 15.0, "sat_fat_g": 7.0, "sodium_mg": 90, "potassium_mg": 100}
+    },
+    {
+      "id": "sugar",
+      "name": "Sugar, white",
+      "category": "sweets",
+      "aliases": ["sugar", "chini"],
+      "typical_grams": 5,
+      "typical_label": "1 tsp",
+      "per_100g": {"kcal": 387, "protein_g": 0.0, "carb_g": 100.0, "fiber_g": 0.0, "sugar_g": 100.0, "fat_g": 0.0, "sat_fat_g": 0.0, "sodium_mg": 1, "potassium_mg": 2}
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "category": "sweets",
+      "aliases": ["honey", "shahad"],
+      "typical_grams": 20,
+      "typical_label": "1 tbsp",
+      "per_100g": {"kcal": 304, "protein_g": 0.3, "carb_g": 82.4, "fiber_g": 0.2, "sugar_g": 82.1, "fat_g": 0.0, "sat_fat_g": 0.0, "sodium_mg": 4, "potassium_mg": 52}
+    },
+    {
+      "id": "chai_milk_sugar",
+      "name": "Masala chai (milk + sugar)",
+      "category": "drinks",
+      "aliases": ["chai", "tea", "masala chai", "milk tea"],
+      "typical_grams": 150,
+      "typical_label": "1 cup",
+      "per_100g": {"kcal": 65, "protein_g": 1.5, "carb_g": 9.0, "fiber_g": 0.0, "sugar_g": 8.0, "fat_g": 2.2, "sat_fat_g": 1.4, "sodium_mg": 25, "potassium_mg": 80}
+    },
+    {
+      "id": "coffee_black",
+      "name": "Coffee, black, no sugar",
+      "category": "drinks",
+      "aliases": ["black coffee", "coffee", "americano"],
+      "typical_grams": 240,
+      "typical_label": "1 cup",
+      "per_100g": {"kcal": 1, "protein_g": 0.1, "carb_g": 0.0, "fiber_g": 0.0, "sugar_g": 0.0, "fat_g": 0.0, "sat_fat_g": 0.0, "sodium_mg": 2, "potassium_mg": 49}
+    },
+    {
+      "id": "lassi_sweet",
+      "name": "Lassi, sweet",
+      "category": "drinks",
+      "aliases": ["lassi", "sweet lassi"],
+      "typical_grams": 250,
+      "typical_label": "1 glass",
+      "per_100g": {"kcal": 100, "protein_g": 2.8, "carb_g": 15.5, "fiber_g": 0.0, "sugar_g": 15.0, "fat_g": 2.8, "sat_fat_g": 1.8, "sodium_mg": 40, "potassium_mg": 130}
+    },
+    {
+      "id": "orange_juice",
+      "name": "Orange juice",
+      "category": "drinks",
+      "aliases": ["orange juice", "juice"],
+      "typical_grams": 240,
+      "typical_label": "1 glass",
+      "per_100g": {"kcal": 45, "protein_g": 0.7, "carb_g": 10.4, "fiber_g": 0.2, "sugar_g": 8.4, "fat_g": 0.2, "sat_fat_g": 0.0, "sodium_mg": 1, "potassium_mg": 200}
+    },
+    {
+      "id": "cola",
+      "name": "Cola / soft drink",
+      "category": "drinks",
+      "aliases": ["cola", "coke", "pepsi", "soft drink", "soda"],
+      "typical_grams": 330,
+      "typical_label": "1 can",
+      "per_100g": {"kcal": 42, "protein_g": 0.0, "carb_g": 10.6, "fiber_g": 0.0, "sugar_g": 10.6, "fat_g": 0.0, "sat_fat_g": 0.0, "sodium_mg": 4, "potassium_mg": 2}
+    },
+    {
+      "id": "beer",
+      "name": "Beer, regular",
+      "category": "drinks",
+      "aliases": ["beer"],
+      "typical_grams": 330,
+      "typical_label": "1 bottle",
+      "per_100g": {"kcal": 43, "protein_g": 0.5, "carb_g": 3.6, "fiber_g": 0.0, "sugar_g": 0.0, "fat_g": 0.0, "sat_fat_g": 0.0, "sodium_mg": 4, "potassium_mg": 27}
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Generated dashboards; regenerate with `nutritrack dashboard <date>`.
+reports/
